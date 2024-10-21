@@ -9,7 +9,7 @@ primary_book.add_contact(user)
 
 
 while True:
-    choice = input(f"\nAdd, View or Remove. Please select an option \n").lower()
+    choice = input(f"\nAdd, View, Update, Remove or Quit. Please select an option \n").lower()
     if choice == 'add':
         name = input('please choose name').title()
         phone = input('please add number')
@@ -21,7 +21,9 @@ while True:
     elif choice == 'remove':
         primary_book.remove_contact()
     elif choice == 'update':
-        pass
-    else: 
-        pass
+        primary_book.update_contact()
+        print("Record updated")
+    elif choice == "quit":
+        break 
+    else: print("Sorry input not recognized")
 

@@ -10,12 +10,18 @@ class ContactBook:
         self.view_contact()
         name = input('\nPlease type name of user you want to remove \n').title() 
         if name in self.book:
-            print("contact found")
             del self.book[name]
-            print("contact removed")
+            print(f"{name} was deleted from the contact book")
 
     def update_contact(self):
-        pass
+        self.view_contact()
+        name = input('\nPlease type name of user you want to update \n').title()
+        if name in self.book:
+            print("contact found")
+            element = input("What type of record do you want to change? Please type name, phone, or email")
+            change = input("Please type in new details")
+            self.book[name].update(element,change)
+        else: print("Name not found")
 
     def view_contact(self):
         if self.book:

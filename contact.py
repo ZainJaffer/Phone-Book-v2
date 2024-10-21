@@ -10,7 +10,4 @@ class Contact:
         pass
 
     def get_details(self):
-        pass
-
-    """Represents a single contact's details (e.g., name, phone, email).
-It should be able to store, update, and display an individual contact's information."""
+        return f"Name: {self.name}, Phone: {self.phone}, Email: {self.email}"
